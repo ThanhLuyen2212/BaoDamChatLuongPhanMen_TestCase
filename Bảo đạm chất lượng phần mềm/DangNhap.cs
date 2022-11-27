@@ -180,7 +180,7 @@ namespace Bảo_đạm_chất_lượng_phần_mềm
         [TestMethod]
         public void DN_07()
         {
-            //"Test chức năng đăng nhập nhập đúng User Name và sai Password
+            //"Test chức năng đăng nhập nhập đúng User Name và đúng Password
 
             int waitingTime = 1000;
 
