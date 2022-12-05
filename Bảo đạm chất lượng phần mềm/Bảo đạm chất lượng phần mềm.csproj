@@ -58,6 +58,7 @@
     <Compile Include="DangNhap.cs" />
     <Compile Include="DangKy.cs" />
     <Compile Include="ThemSanPham.cs" />
+    <Compile Include="ThemKH.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
