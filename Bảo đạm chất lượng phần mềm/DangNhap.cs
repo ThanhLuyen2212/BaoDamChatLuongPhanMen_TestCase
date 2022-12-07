@@ -75,7 +75,7 @@ namespace Bảo_đạm_chất_lượng_phần_mềm
             Thread.Sleep(waitingTime);
             webDriver.Manage().Window.Maximize();
 
-            webDriver.FindElement(By.Name("UserName")).SendKeys("tr");
+            webDriver.FindElement(By.Name("UserName")).SendKeys("thaituan");
             Thread.Sleep(waitingTime);
 
             var btnLogin = webDriver.FindElement(loginButton);
@@ -134,7 +134,7 @@ namespace Bảo_đạm_chất_lượng_phần_mềm
 
             webDriver.FindElement(By.Name("UserName")).SendKeys("tuan");
             Thread.Sleep(waitingTime);
-            webDriver.FindElement(By.Name("Password")).SendKeys("123ddd456789");
+            webDriver.FindElement(By.Name("Password")).SendKeys("123456789");
             Thread.Sleep(waitingTime);
 
             var btnLogin = webDriver.FindElement(loginButton);
@@ -164,7 +164,7 @@ namespace Bảo_đạm_chất_lượng_phần_mềm
 
             webDriver.FindElement(By.Name("UserName")).SendKeys("tuan");
             Thread.Sleep(waitingTime);
-            webDriver.FindElement(By.Name("Password")).SendKeys("123ddd456789");
+            webDriver.FindElement(By.Name("Password")).SendKeys("123456789");
             Thread.Sleep(waitingTime);
 
             var btnLogin = webDriver.FindElement(loginButton);
