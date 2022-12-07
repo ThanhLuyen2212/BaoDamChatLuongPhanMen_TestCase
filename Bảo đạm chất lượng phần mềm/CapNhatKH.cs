@@ -86,6 +86,8 @@ namespace Bảo_đạm_chất_lượng_phần_mềm
             Thread.Sleep(waitingTime);
 
             Assert.IsTrue(webDriver.FindElement(By.XPath("/html/body/div/div/div/div/div/div/div/table/tbody/tr[1]/td[2]")).Text.Equals("0123456789"));
+
+
         }
 
         [TestMethod]
