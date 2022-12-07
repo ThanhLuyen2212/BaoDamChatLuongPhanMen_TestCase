@@ -63,6 +63,7 @@
     <Compile Include="CapNhatKH.cs" />
     <Compile Include="CapNhatHoaDon.cs" />
     <Compile Include="GUIAdmin.cs" />
+    <Compile Include="TimKiemSanPham.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
