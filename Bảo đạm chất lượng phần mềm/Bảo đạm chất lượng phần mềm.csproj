@@ -61,6 +61,7 @@
     <Compile Include="ThemKH.cs" />
     <Compile Include="CapNhatSanPham.cs" />
     <Compile Include="CapNhatKH.cs" />
+    <Compile Include="CapNhatHoaDon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
