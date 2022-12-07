@@ -171,12 +171,108 @@ namespace Bảo_đạm_chất_lượng_phần_mềm
             webDriver.FindElement(By.CssSelector(".btn-outline-success")).Click();
             Thread.Sleep(waitingTime);
 
-
-
-           hê lô
-
             Assert.IsTrue(webDriver.FindElement(By.CssSelector(".tri-state")).Selected.ToString().Equals("True"));
 
+            webDriver.Quit();
+        }
+
+        [TestMethod]
+        public void CNHD_05()
+        {
+            Login();
+            int waitingTime = 1000;
+            var sideBar = webDriver.FindElement(By.XPath("/html/body/div/nav/ul/li[4]/a/span[2]"));
+            sideBar.Click();
+            webDriver.Manage().Window.Maximize();
+            Thread.Sleep(waitingTime);
+            var btnDH = webDriver.FindElement(By.XPath("/html/body/div/nav/ul/li[4]/div/ul/li[1]/a"));
+            btnDH.Click();
+            Thread.Sleep(waitingTime);
+            var dd = webDriver.FindElement(By.Name("tenKH"));
+            dd.SendKeys("Tuan");
+            dd.Submit();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.CssSelector(".btn-outline-warning")).Click();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.Name("NgayThanhToan")).Clear();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.Name("NgayThanhToan")).SendKeys("12/7/2022 12:00:00 AM");
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.XPath("/html/body/div/div/div/form/div/div/div/button")).Click();
+            Thread.Sleep(waitingTime);
+            var da = webDriver.FindElement(By.Name("tenKH"));
+            da.SendKeys("Tuan");
+            da.Submit();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.CssSelector(".btn-outline-success")).Click();
+            Thread.Sleep(waitingTime);
+
+            Assert.IsTrue(webDriver.FindElement(By.XPath("/html/body/div/div/div/div/div/div/form/div[4]/div")).Text.Equals("12/7/2022 12:00:00 AM"));
+            webDriver.Quit();
+        }
+
+        [TestMethod]
+        public void CNHD_06()
+        {
+            Login();
+            int waitingTime = 1000;
+            var sideBar = webDriver.FindElement(By.XPath("/html/body/div/nav/ul/li[4]/a/span[2]"));
+            sideBar.Click();
+            webDriver.Manage().Window.Maximize();
+            Thread.Sleep(waitingTime);
+            var btnDH = webDriver.FindElement(By.XPath("/html/body/div/nav/ul/li[4]/div/ul/li[1]/a"));
+            btnDH.Click();
+            Thread.Sleep(waitingTime);
+            var dd = webDriver.FindElement(By.Name("tenKH"));
+            dd.SendKeys("Tuan");
+            dd.Submit();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.CssSelector(".btn-outline-warning")).Click();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.Name("NgayThanhToan")).Clear();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.Name("NgayThanhToan")).SendKeys("12/7/2500 12:00:00 AM");
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.XPath("/html/body/div/div/div/form/div/div/div/button")).Click();
+            Thread.Sleep(waitingTime);
+
+            Assert.IsTrue(webDriver.FindElement(By.XPath("/html/body/div/div/div/form/div/div/div/div[9]/div/div/input")).Text.Equals("NgayThanhToan phải bé hơn ngày hôm nay"));
+
+            webDriver.Quit();
+        }
+
+        [TestMethod]
+        public void CNHD_07()
+        {
+            Login();
+            int waitingTime = 1000;
+            var sideBar = webDriver.FindElement(By.XPath("/html/body/div/nav/ul/li[4]/a/span[2]"));
+            sideBar.Click();
+            webDriver.Manage().Window.Maximize();
+            Thread.Sleep(waitingTime);
+            var btnDH = webDriver.FindElement(By.XPath("/html/body/div/nav/ul/li[4]/div/ul/li[1]/a"));
+            btnDH.Click();
+            Thread.Sleep(waitingTime);
+            var dd = webDriver.FindElement(By.Name("tenKH"));
+            dd.SendKeys("Tuan");
+            dd.Submit();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.CssSelector(".btn-outline-warning")).Click();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.Name("GhiChu")).Clear();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.Name("GhiChu")).SendKeys("ABC");
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.XPath("/html/body/div/div/div/form/div/div/div/button")).Click();
+            Thread.Sleep(waitingTime);
+            var da = webDriver.FindElement(By.Name("tenKH"));
+            da.SendKeys("Tuan");
+            da.Submit();
+            Thread.Sleep(waitingTime);
+            webDriver.FindElement(By.CssSelector(".btn-outline-success")).Click();
+            Thread.Sleep(waitingTime);
+
+            Assert.IsTrue(webDriver.FindElement(By.XPath("/html/body/div/div/div/div/div/div/form/div[13]/div")).Text.Equals("ABC"));
             webDriver.Quit();
         }
     }
