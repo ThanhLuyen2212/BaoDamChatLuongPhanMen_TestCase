@@ -171,9 +171,12 @@ namespace Bảo_đạm_chất_lượng_phần_mềm
             webDriver.FindElement(By.CssSelector(".btn-outline-success")).Click();
             Thread.Sleep(waitingTime);
 
-           
+
+
+           hê lô
 
             Assert.IsTrue(webDriver.FindElement(By.CssSelector(".tri-state")).Selected.ToString().Equals("True"));
+
             webDriver.Quit();
         }
     }
